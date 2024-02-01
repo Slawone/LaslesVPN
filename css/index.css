@@ -148,6 +148,14 @@ body {
   }
 }
 
+.header__wrapper {
+  display: flex;
+}
+
+.header__nav {
+  display: none;
+}
+
 .header__burger {
   padding: 5px;
 }

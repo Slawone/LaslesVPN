@@ -1,11 +1,20 @@
 import AutorizationLink from './AutorizationLink.js';
 
-const Autorization = (autorization) => {
+/**
+ * @param {array} autorization
+ * @returns
+ */
+
+const Autorization = (autorization, parentClassName) => {
+  const className = parentClassName
+    ? `${parentClassName}__autorization`
+    : 'autorization';
+
   return `
-    <div>
-      ${autorization ? autorization.map(link => AutorizationLink(link)).join('') : ''}
+    <div class="${className}">
+      ${autorization ? autorization.map(link => AutorizationLink(link, className)).join('') : ''}
     </div>
-  `
+  `;
 };
 
 export default Autorization;

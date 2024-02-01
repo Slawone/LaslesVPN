@@ -1,9 +1,19 @@
 import MenuItem from './MenuItem.js';
 
-const Menu = (links) => {
+/**
+ * @param {array} links
+ * @param {string} parentClassName
+ * @returns
+ */
+
+const Menu = (links, parentClassName) => {
+  const className = parentClassName
+    ? `${parentClassName}__nav`
+    : 'nav';
+
   return `
-    <nav>
-      ${links ? links.map(link => MenuItem(link)).join('') : ''}
+    <nav class="${className}">
+      ${links ? links.map(link => MenuItem(link, parentClassName)).join('') : ''}
     </nav>
   `;
 };

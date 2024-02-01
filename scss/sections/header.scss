@@ -4,13 +4,17 @@
 
 .container {}
 
-.header__wrapper {}
+.header__wrapper {
+  display: flex;
+}
 
 .logo {}
 
 .logo__img {}
 
-.header__nav {}
+.header__nav {
+  display: none;
+}
 
 .header__nav-link {}
 
