@@ -1,0 +1,141 @@
+@import '../components/autorization';
+
+.header {
+  @include section-padding;
+  position: relative;
+  z-index: 5px;
+
+  &__wrapper {
+    @include flex-center-sb;
+  }
+
+  &__logo {
+    width: 100px;
+
+    @media (min-width: $breakpoint-md) {
+      width: 148px;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    background-color: $white-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateX(-100%);
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      width: auto;
+      position: static;
+      transform: translateX(0);
+      flex-direction: row;
+      gap: 40px;
+      background-color: inherit;
+    }
+
+    &-link {
+      width: 100%;
+      padding: 30px 0;
+      text-align: center;
+      border-bottom: 1px solid $accent-color;
+      color: $text-color;
+
+      @media (min-width: $breakpoint-lg) {
+        width: auto;
+        padding: 0;
+        border-bottom: none;
+        position: relative;
+        transition: width $animation-duration;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          translate: -50%;
+          width: 0;
+          height: 1px;
+          background-color: $accent-color;
+          transition-duration: inherit;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__theme {
+
+    &-svg {
+      fill: $text-color;
+      transition: fill $animation-duration;
+
+      &.dark {
+        fill: $accent-color;
+      }
+    }
+
+    @media (hover: hover) {
+      &-svg:hover {
+        fill: $accent-color;
+      }
+    }
+  }
+
+  &__burger {
+    padding: 5px;
+
+    span {
+      display: block;
+      transform: translateY(-50%);
+      display: block;
+      height: 3px;
+      width: 30px;
+      background: $accent-color;
+      transition: all .3s;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          transform: rotate(-45deg) translateY(6px);
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(45deg) translateY(-6px);
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+}

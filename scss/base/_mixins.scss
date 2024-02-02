@@ -1,0 +1,13 @@
+@mixin flex-center-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin clamp-16px {
+  font-size: clamp(12px, 1.4vw, 16px);
+}
+
+@mixin section-padding {
+  padding: 25px 0;
+}

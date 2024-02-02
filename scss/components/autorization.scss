@@ -1,0 +1,49 @@
+.autorization {
+  @media (min-width: $breakpoint-sm) {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__link {
+    @include clamp-16px;
+    color: $dark-color;
+    font-weight: 700;
+    outline-width: 1px;
+    outline-style: solid;
+    border-radius: 50px;
+    padding: 5px 20px;
+  }
+
+  &__link_sign-in {
+    outline-color: $dark-color;
+    transition: color $animation-duration, outline-color $animation-duration;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $accent-color;
+        outline-color: $accent-color;
+      }
+    }
+
+    @media (min-width: $breakpoint-sm) {
+      outline: none;
+    }
+  }
+
+  &__link_sign-up {
+    display: none;
+    color: $accent-color;
+    transition: color $animation-duration, background-color $animation-duration;
+
+    @media (min-width: $breakpoint-sm) {
+      display: inline-block;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $accent-color;
+        color: $white-color;
+      }
+    }
+  }
+}

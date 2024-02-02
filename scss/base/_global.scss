@@ -6,6 +6,10 @@ body {
   font-family: $main-font;
   color: $text-color;
   background-color: $background-color-page;
+
+  &.dark {
+    background-color: $dark-color;
+  }
 }
 
 .container {
