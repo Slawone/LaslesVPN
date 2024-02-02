@@ -9,6 +9,13 @@ body {
 
   &.dark {
     background-color: $dark-color;
+
+    h1,
+    h2,
+    h3,
+    p {
+      color: $white-color;
+    }
   }
 }
 

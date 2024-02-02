@@ -118,6 +118,12 @@ body {
 body.dark {
   background-color: #0B132A;
 }
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p {
+  color: #ffffff;
+}
 
 .container {
   width: 100%;
@@ -158,6 +164,7 @@ body.dark {
 }
 .autorization__link_sign-in.dark {
   color: #ffffff;
+  outline-color: #ffffff;
 }
 .autorization__link_sign-up {
   display: none;
