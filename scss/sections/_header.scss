@@ -11,6 +11,19 @@
 
   &__logo {
     width: 100px;
+    @include flex-center-sb;
+
+    &-svg {
+      fill: aqua;
+
+      &:first-child {
+        fill: $dark-color;
+
+        &.dark {
+          fill: $white-color;
+        }
+      }
+    }
 
     @media (min-width: $breakpoint-md) {
       width: 148px;
@@ -30,9 +43,14 @@
     left: 0;
     z-index: 10;
     transform: translateX(-100%);
+    transition: transform $animation-duration;
 
     &.active {
       transform: translateX(0);
+    }
+
+    &.dark {
+      background-color: $dark-color;
     }
 
     @media (min-width: $breakpoint-lg) {
@@ -50,6 +68,10 @@
       text-align: center;
       border-bottom: 1px solid $accent-color;
       color: $text-color;
+
+      &.dark {
+        color: $white-color;
+      }
 
       @media (min-width: $breakpoint-lg) {
         width: auto;
@@ -84,6 +106,7 @@
   }
 
   &__theme {
+    @include flex-center-sb;
 
     &-svg {
       fill: $text-color;
@@ -102,7 +125,6 @@
   }
 
   &__burger {
-    padding: 5px;
 
     span {
       display: block;

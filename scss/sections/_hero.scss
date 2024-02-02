@@ -1,3 +1,55 @@
 .hero {
   @include section-padding;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  &__content {
+    @media (min-width: $breakpoint-md) {
+        max-width: 555px;
+    }
+  }
+
+  &__title {
+    font-size: clamp(30px, 5.9vw, 50px);
+    font-weight: 700;
+    color: $dark-color;
+    margin-bottom: 10px;
+
+    &.dark {
+        color: $white-color;
+    }
+  }
+
+  &__desc {
+    max-width: 555px;
+    @include clamp-16px;
+    margin-bottom: 25px;
+
+    &.dark {
+      color: $white-color;
+    }
+  }
+
+  &__link {
+    @include accent-link;
+  }
+
+  &__image {
+    max-width: 611px;
+    flex-grow: 1;
+    // display: none;
+    @media (min-width: $breakpoint-md) {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

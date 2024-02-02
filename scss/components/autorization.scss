@@ -1,8 +1,7 @@
 .autorization {
-  @media (min-width: $breakpoint-sm) {
-    display: flex;
-    gap: 10px;
-  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   &__link {
     @include clamp-16px;
@@ -27,6 +26,10 @@
 
     @media (min-width: $breakpoint-sm) {
       outline: none;
+    }
+
+    &.dark {
+      color: $white-color;
     }
   }
 
