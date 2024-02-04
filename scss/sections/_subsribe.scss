@@ -1,0 +1,37 @@
+.subsribe {
+  @include section-padding;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: $white-color;
+    @include section-padding;
+    padding-inline: 15px;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 10px;
+      padding-inline: 70px;
+    }
+  }
+
+  &__info {
+    max-width: 370px;
+  }
+
+  &__title {
+    @include second-title;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    @include clamp-16px;
+  }
+
+  &__link {
+    @include accent-link;
+  }
+}

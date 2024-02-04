@@ -1,4 +1,5 @@
 @import '../components/autorization';
+@import '../components/logo';
 
 .header {
   @include section-padding;
@@ -7,27 +8,6 @@
 
   &__wrapper {
     @include flex-center-sb;
-  }
-
-  &__logo {
-    width: 100px;
-    @include flex-center-sb;
-
-    &-svg {
-      fill: aqua;
-
-      &:first-child {
-        fill: $dark-color;
-
-        &.dark {
-          fill: $white-color;
-        }
-      }
-    }
-
-    @media (min-width: $breakpoint-md) {
-      width: 148px;
-    }
   }
 
   &__nav {

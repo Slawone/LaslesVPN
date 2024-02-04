@@ -1,0 +1,107 @@
+@import '../components/logo';
+
+.footer {
+  @include section-padding;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: $breakpoint-sm) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      justify-content: space-between;
+    }
+  }
+
+  &__info {
+    max-width: 340px;
+  }
+
+  &__logo {
+    width: 100px;
+    @include flex-center-sb;
+    margin-bottom: 20px;
+
+    &-svg {
+      fill: aqua;
+
+      &:first-child {
+        fill: $dark-color;
+
+        &.dark {
+          fill: $white-color;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      width: 148px;
+    }
+  }
+
+  &__desc {
+    @include clamp-16px;
+    margin-bottom: 30px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .footer__copyright {
+    @include clamp-16px;
+  }
+
+  .footer__columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      gap: 125px;
+    }
+  }
+
+  .footer__column {
+
+    &-title {
+      font-size: clamp(14px, 1.6vw, 18px);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @media (min-width: $breakpoint-lg) {
+        gap: 20px;
+      }
+    }
+
+    &-list-link {
+      @include clamp-16px;
+      color: $text-color;
+
+      &.dark {
+        color: $white-color;
+      }
+    }
+  }
+}

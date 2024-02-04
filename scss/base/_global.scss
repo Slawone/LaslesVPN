@@ -11,10 +11,9 @@ body {
     background-color: $dark-color;
 
     h1,
-    h2,
+    h2:not([class="subsribe__title"]),
     h3,
-    p,
-    a,
+    p:not([class="subsribe__desc"]),
     li {
       color: $white-color;
     }

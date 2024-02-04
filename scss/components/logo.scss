@@ -1,0 +1,20 @@
+.logo {
+  @include flex-center-sb;
+  width: 100px;
+
+    &__svg {
+      fill: aqua;
+
+      &:first-child {
+        fill: $dark-color;
+
+        &.dark {
+          fill: $white-color;
+        }
+      }
+    }
+
+  @media (min-width: $breakpoint-md) {
+    width: 148px;
+  }
+}

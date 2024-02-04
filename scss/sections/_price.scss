@@ -108,11 +108,41 @@
       }
     }
 
-    &-bottom {}
+    &-bottom {
+      margin-inline: auto;
+    }
 
-    &-plan {}
+    &-plan {
+      text-align: center;
+      font-size: clamp(20px, 2.2vw, 25px);
+      font-weight: 700;
+      margin-bottom: 20px;
 
-    &-btn {}
+      &.dark {
+        color: $white-color;
+      }
+    }
+
+    &-btn {
+      color: $accent-color;
+      border-radius: 50px;
+      font-weight: 700;
+      padding: 13px 63px;
+      outline: 1px solid $accent-color;
+      transition: color $animation-duration, background-color $animation-duration;
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $accent-color;
+          color: $white-color;
+        }
+      }
+
+      &.dark {
+        color: $white-color;
+        outline-color: $white-color;
+      }
+    }
   }
 
 }
