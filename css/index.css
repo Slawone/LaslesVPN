@@ -880,8 +880,13 @@ body.dark li {
   line-height: 30px;
 }
 .reviews .reviews__slider {
-  display: flex;
+  display: none;
   justify-content: space-between;
+}
+@media (min-width: 991px) {
+  .reviews .reviews__slider {
+    display: flex;
+  }
 }
 .reviews .reviews__slider-dots {
   display: flex;
