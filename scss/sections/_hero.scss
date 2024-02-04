@@ -27,6 +27,10 @@
     &.dark {
         color: $white-color;
     }
+
+    @media (min-width: $breakpoint-lg) {
+      margin-bottom: 20px;
+    }
   }
 
   &__desc {

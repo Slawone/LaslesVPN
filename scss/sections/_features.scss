@@ -1,0 +1,58 @@
+.features {
+  @include section-padding;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: center;
+      gap: 100px;
+    }
+  }
+
+  &__img {}
+
+  &__info {
+
+    @media (min-width: $breakpoint-md) {
+      max-width: 428px;
+    }
+  }
+
+  &__title {
+    @include second-title;
+    margin-bottom: 10px;
+
+    @media (min-width: $breakpoint-lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__desc {
+    @include clamp-16px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+
+    &-item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+
+      &::before {
+        content: url('../../images/icons/check-circle.svg');
+        // position: relative;
+        margin-right: 10px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}

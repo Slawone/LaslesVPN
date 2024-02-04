@@ -8,8 +8,22 @@
   font-size: clamp(12px, 1.4vw, 16px);
 }
 
+@mixin second-title {
+  font-size: clamp(20px, 3vw, 35px);
+  font-weight: 500;
+  color: $dark-color;
+}
+
 @mixin section-padding {
   padding: 25px 0;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 35px 0;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding: 50px 0;
+  }
 }
 
 @mixin accent-link {
